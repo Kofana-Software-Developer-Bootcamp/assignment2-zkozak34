@@ -8,15 +8,11 @@
 
 ## Nedir?
 
----
-
 ![ESLint Web Site](./images/1.png)
 
 [Web sitesinde](https://eslint.org/) de yazdığı gibi **Javascript kodumuzdaki hataları bulmamıza ve onları düzeltmemize** yardımcı olan bir araçtır. Ayrıca birden fazla geliştirici tarafında geliştirilen uygulamalarda ortak yazım kuralı belirlenmesinde yardımcı olur. String'lerde `"` yerine `'` kullanılsın, kod sonunda `;` konulsun gibi genel kod yazım kuralı belirleyebiliriz.
 
 ## Kurulum
-
----
 
 > **Gereksinim**: NodeJS `^12.22.0`, `^14.17.0`, veya `>=16.0.0` sürümlerinden birisi yüklü olmalıdır.
 
@@ -88,8 +84,6 @@ yarn lint
 komutlarıyla projemizde ESLint'i çalıştırabiliriz.
 
 ## Kullanma
-
----
 
 Kurulum sonrasında oluşan .eslintrc dosyasının rules bölümünden kurallarımızı belirleyebiliyoruz. Örnek .eslintrc.js:
 
