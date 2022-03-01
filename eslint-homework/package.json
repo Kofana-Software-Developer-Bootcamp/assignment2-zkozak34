@@ -1,0 +1,13 @@
+{
+  "name": "eslint-homework",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint *.js"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^8.10.0",
+    "nodemon": "^2.0.15"
+  }
+}
