@@ -5,12 +5,15 @@
 - [Nedir?](#nedir)
 - [Kurulum](#kurulum)
 - [Kullanma](#kullanma)
+- [Örnek Uygulama](#uygulama)
 
 ## Nedir?
 
 ![ESLint Web Site](./images/1.png)
 
 [Web sitesinde](https://eslint.org/) de yazdığı gibi **Javascript kodumuzdaki hataları bulmamıza ve onları düzeltmemize** yardımcı olan bir araçtır. Ayrıca birden fazla geliştirici tarafında geliştirilen uygulamalarda ortak yazım kuralı belirlenmesinde yardımcı olur. String'lerde `"` yerine `'` kullanılsın, kod sonunda `;` konulsun gibi genel kod yazım kuralı belirleyebiliriz.
+
+<br>
 
 ## Kurulum
 
@@ -83,6 +86,8 @@ yarn lint
 
 komutlarıyla projemizde ESLint'i çalıştırabiliriz.
 
+<br>
+
 ## Kullanma
 
 Kurulum sonrasında oluşan .eslintrc dosyasının rules bölümünden kurallarımızı belirleyebiliyoruz. Örnek .eslintrc.js:
@@ -103,3 +108,28 @@ Kuralların uyarı seviye 0, 1 ve 2 olarak belirlenmektedir. Bu seviyeler:
 - `off` veya `0` - kural kapalı
 - `warn` veya `1` - kuralı uyarı olarak göster
 - `error` veya `2` - kuralı hata olarak göster
+
+<br>
+
+## Uygulama
+
+> Örnek uygulama sırasında VS Code editörünü kullandım. VS Code editöründe ESLint'i daha efektif kullanabilmek için [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) ve [Error Lens](https://marketplace.visualstudio.com/items?itemName=usernamehw.errorlens) eklentilerini kurmanızı öneririm.
+
+İlk olarak:
+
+```
+yarn install
+
+# veya
+
+npm install
+```
+
+komutlarıyla bağımlılıkları indirelim ve projemizi açalım.
+`index.js` içerisinde bazı tanımlamalar, kod blokları bulunmaktadır. Bu tanımlamaların hemen üzerinde yer alan yorum satırı ile hangi kuralın o bölümde geçerli olduğu belirtilmiştir. `.eslintrc.js` dosyasında ki `rules` objesinden `0`,`1` ve `2` kural seviyelerini kullanarak index.js değişimleri gözlemleyelim. Tablo daki örnekte `no-unused-vars` yani **_kullanılmayan değişkenler_** kuralı inceliyoruz.
+
+| Kural                              | Kod                                   | Sonuç               |
+| :--------------------------------- | :------------------------------------ | :------------------ |
+| ![Örnek 1](./images/exp1-rule.png) | ![Örnek 1](./images/exp1.png)         | Uyarı veya hata yok |
+| ![Örnek 2](./images/exp2-rule.png) | ![Örnek 2](./images/exp2-warning.png) | Uyarı var           |
+| ![Örnek 3](./images/exp3-rule.png) | ![Örnek 1](./images/exp3-error.png)   | Hata var            |
