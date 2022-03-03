@@ -1,0 +1,184 @@
+{
+	"info": {
+		"_postman_id": "bcb52428-70db-4f4e-a503-6717ff1dc98d",
+		"name": "Calculator",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Index",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{base_url}}:{{base_port}}",
+					"protocol": "http",
+					"host": [
+						"{{base_url}}"
+					],
+					"port": "{{base_port}}"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{base_url}}:{{base_port}}/add?intA=5&intB=10",
+					"protocol": "http",
+					"host": [
+						"{{base_url}}"
+					],
+					"port": "{{base_port}}",
+					"path": [
+						"add"
+					],
+					"query": [
+						{
+							"key": "intA",
+							"value": "5"
+						},
+						{
+							"key": "intB",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Divide",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{base_url}}:{{base_port}}/divide?intA=10&intB=5",
+					"protocol": "http",
+					"host": [
+						"{{base_url}}"
+					],
+					"port": "{{base_port}}",
+					"path": [
+						"divide"
+					],
+					"query": [
+						{
+							"key": "intA",
+							"value": "10"
+						},
+						{
+							"key": "intB",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Multiply",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{base_url}}:{{base_port}}/multiply?intA=5&intB=10",
+					"protocol": "http",
+					"host": [
+						"{{base_url}}"
+					],
+					"port": "{{base_port}}",
+					"path": [
+						"multiply"
+					],
+					"query": [
+						{
+							"key": "intA",
+							"value": "5"
+						},
+						{
+							"key": "intB",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Subtract",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{base_url}}:{{base_port}}/subtract?intA=5&intB=10",
+					"protocol": "http",
+					"host": [
+						"{{base_url}}"
+					],
+					"port": "{{base_port}}",
+					"path": [
+						"subtract"
+					],
+					"query": [
+						{
+							"key": "intA",
+							"value": "5"
+						},
+						{
+							"key": "intB",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "localhost",
+			"type": "default"
+		},
+		{
+			"key": "base_port",
+			"value": "3000",
+			"type": "default"
+		}
+	]
+}
