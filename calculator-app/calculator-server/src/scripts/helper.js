@@ -23,4 +23,8 @@ const requestCalculator = async ([intA, intB], query) => {
   }
 };
 
-module.exports = requestCalculator;
+const xmlParser = (xml, op) => {
+  return xml.split(`<${op}>`).pop().split(`</${op}>`)[0];
+};
+
+module.exports = { requestCalculator, xmlParser };
