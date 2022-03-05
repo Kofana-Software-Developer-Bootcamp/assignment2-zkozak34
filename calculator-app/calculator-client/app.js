@@ -167,7 +167,7 @@ const add = async (intA, intB) => {
     let data = await response.json()
     responseNumber = data.toString()
   } else {
-    console.log(response.text)
+    console.log('Bağlantı hatası.')
   }
 }
 const divide = async (intA, intB) => {
@@ -176,7 +176,7 @@ const divide = async (intA, intB) => {
     let data = await response.json()
     responseNumber = data.toString()
   } else {
-    console.log(response.text)
+    console.log('Bağlantı hatası.')
   }
 }
 const multiply = async (intA, intB) => {
@@ -185,7 +185,7 @@ const multiply = async (intA, intB) => {
     let data = await response.json()
     responseNumber = data.toString()
   } else {
-    console.log(response.text)
+    console.log('Bağlantı hatası.')
   }
 }
 const subtract = async (intA, intB) => {
@@ -194,6 +194,6 @@ const subtract = async (intA, intB) => {
     let data = await response.json()
     responseNumber = data.toString()
   } else {
-    console.log(response.text)
+    console.log('Bağlantı hatası.')
   }
 }
